@@ -26,7 +26,33 @@ class BasicsExercises
      */
     public static function mealParticipationRate(int $salary, int $childrenCount, bool $single): int
     {
-        return 0;
+        //$childrenCount=15;
+        //$marie=25;
+        //$plafond=50;
+        //$salary=1800;
+        $taux = 0;
+
+        if ($single == true) {
+            $taux = 20;
+        } else {
+            $taux = 25;
+        }
+
+
+        if ($childrenCount == 0) {
+            $taux = 0;
+        } elseif ($childrenCount == 1) {
+            $taux = 15;
+        } else $taux = 30;
+
+        if ($salary < 1800) {
+            $taux = 10;
+        } else $taux += 0;
+
+        if ($taux >= 50) {
+            $taux = 50;
+        }
+        return $taux;
     }
 
     /**
