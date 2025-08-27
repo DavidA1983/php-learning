@@ -97,7 +97,7 @@ class LoopExercises
             // calcul de la nouvelle xp
             $xpPlayer = $xpPlayer + 5 * $turnCount + 10;
 
-            if ($turnCount%3 === 0) {
+            if ($turnCount % 3 === 0) {
                 $xpPlayer = $xpPlayer + 20;
             }
             $turnCount++;
@@ -120,15 +120,12 @@ class LoopExercises
      */
     public static function factorial($n): int
     {
-        $n=5;
-        for ( $i=$n; $i=1; $i--) {
-            //$n=($i-1)*$n;
-          
+        $f = 1;
+        for ($i = 1; $i <= $n; $i++) {
+            $f = $f * $i;
         }
-            return $n;       
-                    
+        return $f;
     }
-
     /**
      * Retourne la somme des chiffres d’un nombre entier positif.
      * 
@@ -150,7 +147,11 @@ class LoopExercises
         // Par exemple : 123 % 10 retourne 3
         // puis 12 % 10 retoure 2
         // ...
-
+        while ($n > 0) {
+            $r = $n % 10;
+            $n = $n / 10;
+            $sum = $sum + $r;
+        }
         return $sum;
     }
 } // fin de la classe
