@@ -14,12 +14,15 @@ class ArrayExercises
      * @param array $array Le tableau à traiter
      * @return integer Le résultat de l'addition. Doit retourner 0 si un tableu vide est passé
      */
+
     public static function sumAllElements(array $array): int
     {
-
-        // TODO utiliser une boucle "for" ou "while" pour passer en revue les éléments d'un tableau
-
-        return -1;
+        $somme = 0;
+        for ($i = 0; $i < count($array); $i++) {
+            // TODO utiliser une boucle "for" ou "while" pour passer en revue les éléments d'un tableau
+            $somme = $somme + $array[$i];
+        }
+        return $somme;
     }
 
     /**
@@ -38,7 +41,15 @@ class ArrayExercises
      */
     public static function sumBetweenIndexes(array $array, int $start, int $end): int
     {
-        return -1;
+        $sumBetweenIndexes = 0;
+        for ($i = $start; $i <= $end; $i++) {
+
+
+            $sumBetweenIndexes = $sumBetweenIndexes + $array[$i];
+        }
+        if ($end < $start)
+            return -1;
+        return $sumBetweenIndexes;
     }
 
     /**
@@ -57,7 +68,7 @@ class ArrayExercises
         $oddValues = [];
 
         // TODO implémenter la suite de l'algorithme
-        // pour ajouter un élément à un tableau vous pourrez utiliser la fonciton "array_push" : https://www.php.net/manual/en/function.array-push.php
+        // pour ajouter un élément à un tableau vous pourrez utiliser la fonction "array_push" : https://www.php.net/manual/en/function.array-push.php
 
         return $oddValues;
     }
